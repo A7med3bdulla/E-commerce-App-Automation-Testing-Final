@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="4" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="16" time="225.353">
+<testcase classname="User could register with valid data" name="User register with valid data" time="24.55">
+<system-out><![CDATA[Given Click on Register tab.................................................passed
+When Click on any radio button to chose gender..............................passed
+And User enter First name and Last name.....................................passed
+And User Select Date of Birth: Select [Day, Month, Year]....................passed
+And User enter email: "autotest@testing.com"................................passed
+And Fill Company name.......................................................passed
+And User enter Password and Confirm it: "test00"............................passed
+And Click on REGISTER button................................................passed
+Then User could register successfully.......................................passed
+And Click on CONTINUE button................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could login with credentials" name="User login with valid credentials" time="14.217">
+<system-out><![CDATA[Given Click on Login tab....................................................passed
+When User enter "autotest@testing.com" and "test00".........................passed
+And Click on login button...................................................passed
+Then User could login successfully..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could login with credentials" name="User login with invalid credentials" time="12.421">
+<system-out><![CDATA[Given Click on Login tab....................................................passed
+When User enter "invalid@testing.com" and "XXXXXXX".........................passed
+And Click on login button...................................................passed
+Then User could not login...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could switch between currencies [US-Euro]" name="User switch between US and Euro" time="16.166">
+<system-out><![CDATA[When User Select “Euro” from currency dropdown list.........................passed
+Then user check if action done successfully.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could search for any product" name="User search for desired products with product name" time="14.256">
+<system-out><![CDATA[Given Type "Apple" on search text box.......................................passed
+When Click on SEARCH button.................................................passed
+Then User could find Apple products.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could search for any product" name="User search for desired products with SKU" time="12.156">
+<system-out><![CDATA[Given Type "APPLE_CAM" on search text box...................................passed
+When Click on SEARCH button.................................................passed
+Then User could find Apple product..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could select different categories and sub-category" name="Select random category then hover and open sub-Category" time="12.613">
+<system-out><![CDATA[Given Hover the header menu and select random category then hover it........passed
+When Click on random sub-category...........................................passed
+Then User could open sub-category page......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could click on slider wrapper" name="Click on Nokia banner on responsive slider wrapper" time="10.394">
+<failure message="The following asserts failed:&#10;&#9;expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [http://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[Given Click on Nokia banner controller......................................passed
+When Click on Nokia banner..................................................passed
+Then User could click on the banner and redirect to the Nokia link..........failed
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [http://demo.nopcommerce.com/]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.example.stepDefinitions.D06_homeSlidersStepDef.slider_Nokia(D06_homeSlidersStepDef.java:32)
+	at ✽.User could click on the banner and redirect to the Nokia link(file:///C:/Users/3bdulla/Desktop/E-commerce-App-Automation-Testing-Final/src/main/resources/features/F06_homeSliders.feature:11)
+]]></failure>
+</testcase>
+<testcase classname="User could click on slider wrapper" name="Click on Nokia banner on responsive slider wrapper 2" time="11.778">
+<failure message="The following asserts failed:&#10;&#9;expected [https://demo.nopcommerce.com/iphone-6] but found [http://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[Given Click on IPhone banner controller.....................................passed
+When Click on IPhone banner.................................................passed
+Then User could click on the banner and redirect to the IPhone link.........failed
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	expected [https://demo.nopcommerce.com/iphone-6] but found [http://demo.nopcommerce.com/]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.example.stepDefinitions.D06_homeSlidersStepDef.slider_IPhone(D06_homeSlidersStepDef.java:54)
+	at ✽.User could click on the banner and redirect to the IPhone link(file:///C:/Users/3bdulla/Desktop/E-commerce-App-Automation-Testing-Final/src/main/resources/features/F06_homeSliders.feature:18)
+]]></failure>
+</testcase>
+<testcase classname="Follow us links open the corresponding URLs" name="user could open facebook" time="13.546">
+<system-out><![CDATA[When Click on facebook icon.................................................passed
+Then User could open facebook page..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Follow us links open the corresponding URLs" name="user could open twitter" time="14.014">
+<system-out><![CDATA[When Click on twitter icon..................................................passed
+Then User could open twitter page...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Follow us links open the corresponding URLs" name="user could open rss" time="14.384">
+<failure message="The following asserts failed:&#10;&#9;expected [https://demo.nopcommerce.com/new-online-store-is-open] but found [https://demo.nopcommerce.com/news/rss/1]" type="java.lang.AssertionError"><![CDATA[When Click on rss icon......................................................passed
+Then User could open rss page...............................................failed
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	expected [https://demo.nopcommerce.com/new-online-store-is-open] but found [https://demo.nopcommerce.com/news/rss/1]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.example.stepDefinitions.D07_followUsStepDef.rss_Open(D07_followUsStepDef.java:75)
+	at ✽.User could open rss page(file:///C:/Users/3bdulla/Desktop/E-commerce-App-Automation-Testing-Final/src/main/resources/features/F07_followUs.feature:17)
+]]></failure>
+</testcase>
+<testcase classname="Follow us links open the corresponding URLs" name="user could open youtube" time="17.174">
+<system-out><![CDATA[When Click on youtube icon..................................................passed
+Then User could open youtube page...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could add products to wishlist" name="User choose a product and click on Add to wishlist icon" time="10.784">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div[class=&quot;bar-notification success&quot;]&quot;}&#10;  (Session info: chrome=102.0.5005.115)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.2.1', revision: 'ac4d0fdd4a'&#10;System info: host: '3BDULLA-PC', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_331'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [1560553b34bcfd7f670f6e64afae2f9d, findElement {using=css selector, value=div[class=&quot;bar-notification success&quot;]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\3bdulla\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61428}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61428/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 1560553b34bcfd7f670f6e64afae2f9d" type="org.openqa.selenium.NoSuchElementException"><![CDATA[When user add product to wishlist...........................................passed
+Then after adding the product to wishlist  success message appeared.........failed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"div[class="bar-notification success"]"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.2.1', revision: 'ac4d0fdd4a'
+System info: host: '3BDULLA-PC', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_331'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1560553b34bcfd7f670f6e64afae2f9d, findElement {using=css selector, value=div[class="bar-notification success"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\3bdulla\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61428}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61428/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1560553b34bcfd7f670f6e64afae2f9d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:551)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:369)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.example.stepDefinitions.D08_WishlistStepDef.success_Message(D08_WishlistStepDef.java:23)
+	at ✽.after adding the product to wishlist  success message appeared(file:///C:/Users/3bdulla/Desktop/E-commerce-App-Automation-Testing-Final/src/main/resources/features/F08_Wishlist.feature:9)
+]]></failure>
+</testcase>
+<testcase classname="User could add products to wishlist" name="number of wishlist items in home page is increased" time="11.511">
+<system-out><![CDATA[When user add product to wishlist...........................................passed
+Then after adding the product to wishlist  success message appeared.........passed
+And user get the of wishlist items after adding product.....................passed
+Then number of wishlist items increased.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could add products to cart" name="User choose a product and click on ADD TO CART button" time="14.355">
+<system-out><![CDATA[Given Scroll down and choose a random product and click on it...............passed
+When Click on ADD TO CART button............................................passed
+Then the product is added to the user's shopping cart and message appears says The product has been added to your shopping cart.passed
+]]></system-out>
+</testcase>
+</testsuite>

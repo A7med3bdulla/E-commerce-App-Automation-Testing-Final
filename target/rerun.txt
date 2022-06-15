@@ -1,0 +1,3 @@
+file:src/main/resources/features/F06_homeSliders.feature:6:13
+file:src/main/resources/features/F08_Wishlist.feature:6
+file:src/main/resources/features/F07_followUs.feature:15
